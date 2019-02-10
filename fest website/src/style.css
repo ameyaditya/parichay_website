@@ -1,0 +1,96 @@
+.carousel .carousel-item{
+	max-height: 600px;
+}
+.container-fluid{
+	margin-top: 20px;
+}
+.lead{
+	font-size: 1.5rem;
+}
+.event-images >img{
+	height: 200px;
+	width: 200px;
+	text-align: center;
+	align-self: center;
+}
+.eve{
+	text-align: center;
+	background-color: orange;
+	padding-top: 20px;
+}
+.eve:hover{
+	background-color: green;
+	transform: scale(1.1);
+	z-index: 999;
+
+}
+.eve-heading{
+	text-align: center;
+}
+
+.eve-heading-small{
+	text-align: center;
+	display: none;
+}
+
+.cont{
+	margin-top: 10px;
+	color: #D5D5D5;
+	font-size: 2em;
+
+}
+
+@media screen and (max-width: 600px){
+	.event-images >img{
+		height: 100px;
+		width: 100px;
+	}	
+	.lead{
+		font-size: 1rem;
+	}
+	.eve-heading-small{
+	text-align: center;
+	display: block;
+	}
+	.eve-heading{
+		display: none;
+		text-align: center;
+	}
+}
+.filter-form{
+	margin-left: 30px;
+}
+.filter-form > h1{
+	margin-right: 20px;
+}
+#myBtnContainer{
+	margin-left: 20px;
+}
+@media screen and (max-width: 992px){
+	.event-images >img{
+		height: 150px;
+		width: 150px;
+	}	
+}
+
+html {
+  font-size: 1rem;
+}
+
+@include media-breakpoint-up(sm) {
+  html {
+    font-size: 1.2rem;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  html {
+    font-size: 1.4rem;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  html {
+    font-size: 1.6rem;
+  }
+}
