@@ -32,7 +32,24 @@
 	text-align: center;
 	display: none;
 }
+.event-box-footer{
+	text-align: right;
+	margin-right: 10px;
+	display: inline;
+}
+.event-box-footer > *{
+	display: inline-block;
+	text-align: right;
+	padding: 7px;
 
+}
+.event-box-footer > button{
+	border-radius: 50%;
+	width: 35px;
+	text-align: center;
+	text-decoration: none;
+	border: none;
+}
 .cont{
 	margin-top: 10px;
 	color: #D5D5D5;

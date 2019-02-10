@@ -94,22 +94,86 @@
 		<button class="btn" onclick="filterSelection('gaming')"> Gaming</button>
 		<button class="btn" onclick="filterSelection('sports')"> Sports</button>
 	</div>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-3">
+				<div class="event-box">
+					<div class="event-box-images">
+						
+					</div>
+					<div class="event-box-heading">
+						<h6 class="event-box-head">Heading</h6>
+					</div>
+					<div class="event-box-details">
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco</p>
+					</div>
+					<div class="event-box-footer">
+						<button id="dec-1" class="dec">-</button><div class="counter" id="counter-1">0</div><button id="inc-1" class="inc">+</button>
+					</div>
+				</div>
+			</div>
 
-	<div class="event-box">
-		<div class="event-box-images">
-			
-		</div>
-		<div class="event-box-heading">
-			<h6 class="event-box-head">Heading</h6>
-		</div>
-		<div class="event-box-details">
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-			quis nostrud exercitation ullamco</p>
-		</div>
-		<div class="event-box-footer">
-			<button id="dec-1" class="dec">-</button><div class="counter" id="counter-1">0</div><button id="inc-1" class="inc">+</button>
+			<div class="col-md-3">
+				<div class="event-box">
+					<div class="event-box-images">
+						
+					</div>
+					<div class="event-box-heading">
+						<h6 class="event-box-head">Heading</h6>
+					</div>
+					<div class="event-box-details">
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco</p>
+					</div>
+					<div class="event-box-footer">
+						<button id="dec-2" class="dec">-</button><div class="counter" id="counter-2">0</div><button id="inc-2" class="inc">+</button>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-3">
+				<div class="event-box">
+					<div class="event-box-images">
+						
+					</div>
+					<div class="event-box-heading">
+						<h6 class="event-box-head">Heading</h6>
+					</div>
+					<div class="event-box-details">
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco</p>
+					</div>
+					<div class="event-box-footer">
+						<button id="dec-3" class="dec">-</button><div class="counter" id="counter-3">0</div><button id="inc-3" class="inc">+</button>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-3">
+				<div class="event-box">
+					<div class="event-box-images">
+						
+					</div>
+					<div class="event-box-heading">
+						<h6 class="event-box-head">Heading</h6>
+					</div>
+					<div class="event-box-details">
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco</p>
+					</div>
+					<div class="event-box-footer">
+						<button id="dec-4" class="dec">-</button><div class="counter" id="counter-4">0</div><button id="inc-4" class="inc">+</button>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
+
+	
 </body>
 </html>
