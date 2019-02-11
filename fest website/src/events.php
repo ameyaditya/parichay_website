@@ -87,16 +87,26 @@
   //     alert("Data: " + finalAmount );
   //   });
   // });
-
-
+  			$(document).ready(function(){
+  				$('#check-out').click(function(){
+  					$.post( 
+                 	 "submitcart.php",
+                  	 { data:JSON.stringify(cart_items)},
+                  	 function(data){
+                  	 	alert(data);
+                  	 }
+               );
+  				});
+  			});
 			$(document).ready(function(){
+				/*
 				$.ajax({
-			       url:"Instamojo.php",   // script location
+			       url:"submitcart.php",   // script location
 			       method:"POST",           
 			      
 			       data:{
-			 
-			          price:updatedamount,
+			 			
+			          details:updatedamount,
 			        
 			        },
 			        success:function(data) 
@@ -107,7 +117,7 @@
 			        }
 			    });
 			return false;
-					});
+					});*/
 
 			$("#cart-button").click(function(){
 		
@@ -134,6 +144,7 @@
 				$("#total").text("");
 			})
 			});
+		});
 
 	</script>
 </head>
@@ -162,7 +173,7 @@
 		      </div>
 		      <div class="modal-footer">
 		        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-		        <button type="button" class="btn btn-primary" id>Check Out</button>
+		        <button type="button" class="btn btn-primary" id="check-out">Check Out</button>
 		      </div>
 		    </div>
 		  </div>
