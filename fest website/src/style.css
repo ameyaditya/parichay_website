@@ -24,6 +24,25 @@
 	z-index: 999;
 
 }
+.modal-button{
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	height: 60px;
+	width: 60px;
+	border-radius: 90%;
+	align-content: center;
+	z-index: 999;
+	background-color: orange;
+	border: none;
+}
+#shopping-cart{
+	height: 30px;
+	width: 30px;
+	text-align: center;
+	align-self: center;
+
+}
 .eve-heading{
 	text-align: center;
 }

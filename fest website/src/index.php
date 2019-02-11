@@ -52,12 +52,6 @@
 		      </li>
 		      
 		    </ul>
-		    	<p>
-		    		<a href="#">
-		          		<i class="fa fa-shopping-cart" style="font-size:24px; text-decoration: none; color: grey; text-decoration-color: grey;"></i>
-		          		 Cart
-		      		</a>
-		      	</p>
 		  </div>
 	</nav>
 	<div id="carouselExampleIndicators" class="carousel slide cari" data-ride="carousel">
