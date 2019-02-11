@@ -15,6 +15,7 @@
 		var updatedamount = 0;
 		var cart_items = [];
 		var ind = 0;
+		var total = 0;
 		function Event(event_name, tickets){
 			this.event_name = event_name;
 			this.tickets = tickets;
@@ -78,13 +79,22 @@
 					$("#cart-data").text("Cart Empty");
 				}
 				else{
+					total = 0;
 					for(var i = 0;i < cart_items.length;i++){
+						total += baseprice*cart_items[i].tickets;
 						final_content += "<div class='row'><div class='col-sm-6'>"+cart_items[i].event_name+"</div><div class='col-sm-1'>X</div><div class='col-sm-2'>"+String(cart_items[i].tickets)+"</div><div class='col-sm-3'>"+String(baseprice*cart_items[i].tickets)+"</div></div>";
 					}
 					final_content += "</div>";
 					console.log(final_content);
 					$("#cart-items").html(final_content);
+					tot_string = "<h6>Total: Rs."+String(total)+"</h6>";
+					$("#total").html(tot_string);
 				}
+			})
+			$("#close-modal").click(function(){
+				$("#cart-items").html("");
+				$("#cart-data").text("");
+				$("#total").text("");
 			})
 		});
 	</script>
@@ -101,7 +111,7 @@
 		    <div class="modal-content">
 		      <div class="modal-header">
 		        <h5 class="modal-title" id="exampleModalLongTitle">Cart</h5>
-		        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close" id="close-modal">
 		          <span aria-hidden="true">&times;</span>
 		        </button>
 		      </div>
@@ -110,10 +120,11 @@
 		        <div class="cart-items" id="cart-items">
 		        	
 		        </div>
+		        <div id="total"></div>
 		      </div>
 		      <div class="modal-footer">
 		        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-		        <button type="button" class="btn btn-primary">Save changes</button>
+		        <button type="button" class="btn btn-primary">Check Out</button>
 		      </div>
 		    </div>
 		  </div>
