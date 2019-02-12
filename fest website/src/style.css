@@ -18,11 +18,22 @@
 	background-color: orange;
 	padding-top: 20px;
 }
+.container-fluid{
+	padding-left: 20px;
+	padding-right: 20px;
+}
 .eve:hover{
 	background-color: green;
 	transform: scale(1.1);
 	z-index: 999;
 
+}
+.cat-header{
+	margin-top: 50px;
+	align-self: center;
+}
+.event-box{
+	margin-top: 20px;
 }
 .modal-button{
 	position: fixed;
@@ -55,6 +66,7 @@
 	text-align: right;
 	margin-right: 10px;
 	display: inline;
+	float: right;
 }
 .event-box-footer > *{
 	display: inline-block;
