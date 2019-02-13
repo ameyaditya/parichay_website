@@ -1,3 +1,9 @@
+.about
+{
+	padding-top: 20px;
+	border-bottom: 3px solid blueviolet;
+}
+
 .carousel .carousel-item{
 	max-height: 600px;
 }
@@ -5,7 +11,12 @@
 	margin-top: 20px;
 }
 .lead{
-	font-size: 1.5rem;
+	padding-top: 16px;
+    font-size: 23px;
+    font-weight: 400;
+    line-height: 30px;
+    color: rgb(26, 26, 27);
+    overflow: auto;
 }
 .event-images >img{
 	height: 200px;
@@ -95,13 +106,6 @@
 		width: 100px;
 	}	
 	.lead{
-		padding-top: 16px;
-    font-family: Noto Sans, Helvetica Neue, Segoe UI, Helvetica, Verdana, Arial, sans - serif;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 21px;
-    color: rgb(26, 26, 27);
-    overflow: auto;
 
 		font-size: 1rem;
 	}
