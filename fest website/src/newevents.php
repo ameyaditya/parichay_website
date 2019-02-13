@@ -100,13 +100,34 @@
 			})
   			$(document).ready(function(){
   				$('#check-out').click(function(){
+  					var form = $(document.createElement('form'));
+				    $(form).attr("action", "submitcart.php");
+				    $(form).attr("method", "POST");
+				    $(form).css("display", "none");
+
+				    var input_data = $("<input>")
+				    .attr("type", "text")
+				    .attr("name", "data")
+				    .val(JSON.stringify(cart_items));
+				    $(form).append($(input_data));
+
+				    var input_prices = $("<input>")
+				    .attr("type", "text")
+				    .attr("name", "prices")
+				    .val(JSON.stringify(events_list));
+				    $(form).append($(input_prices));
+
+				    form.appendTo( document.body );
+				    $(form).submit();
+
+  					/*window.location = "submitcart.php";
   					$.post( 
                  	 "submitcart.php",
                   	 { data:JSON.stringify(cart_items)},
                   	 function(data){
-                  	 	alert(data);
                   	 }
                );
+               */
   				});
   			});
 			$(document).ready(function(){
@@ -201,7 +222,7 @@
 		      </li>
 
 		      <li class="nav-item">
-		        <a class="nav-link" href="#">Sponsors</a>
+		        <a class="nav-link" href="sample.php">Sponsors</a>
 		      </li>
 
 		      <li class="nav-item">
@@ -231,7 +252,7 @@
 	<div class="container-fluid">
 
 		<?php
-			$categories = "SELECT DISTINCT Category FROM Events";
+			$categories = "SELECT DISTINCT Category FROM events";
 			$category = mysqli_query($con, $categories);
 			while($cat = mysqli_fetch_assoc($category)){
 				$counter = 0;
@@ -249,8 +270,9 @@
 					$name = $det['Name'];
 					$price = $det['Price'];
 					$descr = $det['Description'];
+					$images_url = "'images/".$name.".png'";
 					echo '<div class="col-md-3">';
-					echo '<div class="event-box" id="event-box'.$id.'"><div class="event-box-images'.$id.'" id="event-box-images'.$id.'"></div>';
+					echo '<div class="event-box" id="event-box'.$id.'"><div class="event-box-images" id="event-box-images'.$id.'" style="background-image: url('.$images_url.');"></div>';
 					echo '<div class="event-box-heading"><h6 class="event-box-head" id="event-box-heading-'.$id.'">'.$name.'</h6></div>';
 					echo '<div class="event-box-details"><p id="event-box-details'.$id.'">'.$descr.'</p></div>';
 					echo '<div class="event-box-footer"><div class="amount" id="amount-'.$id.'">Rs.0</div><button id="dec-'.$id.'" class="dec">-</button><div class="counter" id="counter-'.$id.'">0</div><button id="inc-'.$id.'" class="inc">+</button></div>';

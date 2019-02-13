@@ -13,6 +13,9 @@
 	text-align: center;
 	align-self: center;
 }
+.submitcontainer{
+	margin-top: 50px;
+}
 .eve{
 	text-align: center;
 	background-color: orange;
@@ -21,6 +24,13 @@
 .container-fluid{
 	padding-left: 20px;
 	padding-right: 20px;
+}
+.event-box-images{
+	width: 100%;
+	padding-bottom: 100%;
+	margin-bottom: 30px;
+	background-size: cover;
+	background-repeat: no-repeat;
 }
 .eve:hover{
 	background-color: green;

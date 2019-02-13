@@ -1,11 +1,12 @@
 <?php 
+	$con = mysqli_connect('localhost', 'root', '');
 	$db = mysqli_select_db($con, 'parichay');
 	if(!$db){
 		$sql = 'CREATE DATABASE parichay';
 		mysqli_query($sql, $con);
 		$db = mysqli_select_db($con, 'parichay');
 	}
-	$create_table = "CREATE TABLE IF NOT EXISTS Events (
+	$create_table = "CREATE TABLE IF NOT EXISTS events (
 					id INT(6) AUTO_INCREMENT PRIMARY KEY,
 					Name VARCHAR(30) NOT NULL,
 					Category VARCHAR(30) NOT NULL,
