@@ -78,7 +78,7 @@
 	</div>
 
 	<div class="container-fluid">
-		<h3 class="h3 ">About Parichay</h3>
+		<h2 class="about">About Parichay</h2>
 		<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
