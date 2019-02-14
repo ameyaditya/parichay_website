@@ -1,3 +1,8 @@
+#cart-items  .row 
+{
+	flex-wrap: nowrap;
+}
+
 .about
 {
 	padding-top: 20px;
