@@ -1,0 +1,111 @@
+.eve{
+	text-align: center;
+	background-color: orange;
+	padding-top: 20px;
+	padding-left: 10px;
+	margin-top: 20px;
+	padding-right: 10px;
+	margin-bottom: 40px;
+}
+
+.event-images >img{
+	height: 200px;
+	width: 90%;
+	text-align: center;
+	align-self: center;
+}
+.event-images{
+	text-align: center;
+}
+.cont{
+	margin-top: 10px;
+	color: #D5D5D5;
+	font-size: 2em;
+
+}
+.eve:hover{
+	background-color: green;
+	transform: scale(1.1);
+	z-index: 999;
+
+}
+
+.banner{
+	position: relative;
+	z-index: 1;
+	height: 50vw;
+	flex-direction: column;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.banner .logo{
+	background: url("images/rnsit.png") center center;
+	//position: absolute;
+	height: 100%;
+	width: 100%;
+	background-repeat: no-repeat;
+}
+.banner .bg{
+	position: absolute;
+	z-index: -1;
+	top:0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	opacity: 0.3;
+	background: url("images/mar1.jpg") center center;
+	height: 100%;
+	width: 100%;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.flex-container {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row;
+    justify-content: space-around;
+   
+    line-height:30px;
+}
+.flex-item {
+    background: tomato;
+    margin: 5px;
+    color: white;
+    font-weight: bold;
+    font-size: 3em;
+    text-align: center;
+    flex: 1 0 auto;
+    height: auto;
+}
+.flex-item:before {
+    content:'';
+    float:left;
+    padding-top:100%;
+}
+#marathon-header-big{
+		visibility: visible;
+	}
+	#marathon-header-small{
+		visibility: hidden;
+	}
+@media screen and (max-width: 600px){
+	#marathon-header-big{
+		visibility: hidden;
+	}
+	#marathon-header-small{
+		visibility: visible;
+	}
+	.banner{
+		height: 80vw;
+	}
+	.banner h1{
+		font-size: 3em;
+	}
+}
