@@ -1,4 +1,4 @@
-var deadline = new Date("March 14, 2019 08:00:00").getTime();
+var deadline = new Date("March 24, 2019 08:00:00").getTime();
 var x = setInterval(function() { 
 var now = new Date().getTime(); 
 var t = deadline - now; 
@@ -18,3 +18,8 @@ document.getElementById('secs').innerHTML = seconds;
 		document.getElementById('secs').innerHTML = '0'; 
     } 
 }, 1000);
+
+function topFunction() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}

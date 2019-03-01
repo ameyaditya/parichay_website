@@ -13,94 +13,105 @@
 </head>
 <body>
 	<nav class="navbar navbar-expand-lg navbar-light bg-light">
-		<a href="#" class="navbar-brand">Parichay Marathon</a>
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+		<a href="index.php" class="navbar-brand">Parichay Marathon</a>
 	</nav>
-	<div class="container">
+	<div class="container price-header">
+		<h1>Pricing Plans</h1>
 		<table class="table">
 		  <thead>
 		    <tr>
 		      <th scope="col">#</th>
-		      <th scope="col">Category</th>
+		      <th scope="col">Plans</th>
 		      <th scope="col">Price</th>
 		    </tr>
 		  </thead>
 		  <tbody>
 		    <tr>
 		      <th scope="row">1</th>
-		      <td>5K Marathon</td>
-		      <td>Rs: 500</td>
+		      <td>Basic (Marathon Ticket)</td>
+		      <td>Rs: 250</td>
 		    </tr>
 		    <tr>
 		      <th scope="row">2</th>
-		      <td>10K marathon</td>
-		      <td>Rs: 1000</td>
-		    </tr>
-		    <tr>
-		      <th scope="row">3</th>
-		      <td>T - Shirt</td>
-		      <td>Rs: 200</td>
+		      <td>Standard (Marathon Ticket + T-Shirt)</td>
+		      <td>Rs: 350</td>
 		    </tr>
 		  </tbody>
 		</table>
 	</div>
-	<div class="container">
-		<form id="tickets-form">
+	<div class="container reg-form">
+		<h1>Registration Form</h1>
+		<form id="tickets-form" method="POST" action="payment.php"> 
 		  <div class="form-group">
 		    <label for="customername">Name</label>
-		    <input type="text" class="form-control" id="customername" placeholder="Enter Name" required>
+		    <input type="text" class="form-control" id="customername" name="customername"  placeholder="Enter Name" required>
 		  </div>
 		  <div class="form-group">
 		    <label for="customeremail">Email address</label>
-		    <input type="email" class="form-control" id="customeremail" aria-describedby="emailHelp" placeholder="Enter Email ID" required>
+		    <input type="email" class="form-control" id="customeremail" name="customeremail" aria-describedby="emailHelp" placeholder="Enter Email ID" required>
 		  </div>
 		  <div class="form-group">
 		    <label for="customerphone">Phone Number</label>
-		    <input type="tel" class="form-control" id="customerphone" placeholder="Enter Phone Number" pattern="[1-9]{1}[0-9]{9}" required>
+		    <input type="tel" class="form-control" id="customerphone" name="customerphone" placeholder="Enter Phone Number" pattern="[1-9]{1}[0-9]{9}" required>
 		  </div>
+		  <div class="form-group form-row">
+			  	<div class="col-4 md-3"><label>Category</label></div>
+			  	<div class="col-4 md-3">
+		  		  <div class="form-check">
+					  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+					  <label class="form-check-label" for="exampleRadios1">
+					    Male
+					  </label>
+					</div>
+				</div>
+				<div class="col-4 md-3">
+					<div class="form-check">
+					  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+					  <label class="form-check-label" for="exampleRadios2">
+					    Female
+					  </label>
+				  </div>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="sub-category">Sub - Category</label>
+			      <select id="inputState" class="form-control" required>
+			        <option selected>Student</option>
+			        <option>Teacher</option>
+			        <option>Corporate</option>
+			        <option>Open</option>
+			      </select>
+			</div>
 		  <div class="form-row form-group">
 		  	<div class="col-5 md-3">
-		  	<label for="5kmarathon">5K Marathon Tickets</label>
+		  	<label for="basic">Basic Tickets</label>
 		  	</div>
 		  	<div class="col-1 md-3">
 		  		<label>X</label>
 		  	</div>
 		  	<div class="col-6 md-3">
-		  		<input type="number" min="0" class="form-control" id="5kmarathon" placeholder="Enter Number of Tickets" value="0" required>
+		  		<input type="number" min="0" class="form-control basic" id="basic" placeholder="Enter Number of Tickets" value="0" name="basic" required>
 		  	</div>
 		  </div>
-
 		  <div class="form-row form-group">
 		  	<div class="col-5 md-3">
-		  	<label for="10kmarathon">10K Marathon Tickets</label>
+		  	<label for="standard">Standard Tickets</label>
 		  	</div>
 		  	<div class="col-1 md-3">
 		  		<label>X</label>
 		  	</div>
 		  	<div class="col-6 md-3">
-		  		<input type="number" min="0" class="form-control" id="10kmarathon" placeholder="Enter Number of Tickets" value="0" required>
-		  	</div>
-		  </div>
-
-		  <div class="form-row form-group">
-		  	<div class="col-5 md-3">
-		  	<label for="tshirts">T-Shirts</label>
-		  	</div>
-		  	<div class="col-1 md-3">
-		  		<label>X</label>
-		  	</div>
-		  	<div class="col-6 md-3">
-		  		<input type="number" min="0" class="form-control" id="tshirts" placeholder="Enter Number of Tickets" value="0" required>
+		  		<input type="number" min="0" class="form-control" id="standard" placeholder="Enter Number of Tickets" value="0" name="standard" required>
 		  	</div>
 		  </div>
 		  <div class="form-group">
 		  	<label id="total"><h1><span>Rs. 0</span></h1></label>
 		  </div>
 		  <div class="form-check">
-		    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-		    <label class="form-check-label" for="exampleCheck1">I have read the Terms & Conditions</label>
+		    <input type="checkbox" class="form-check-input" id="exampleCheck1" required>
+		    <label class="form-check-label" for="exampleCheck1">I have read the <a href="#" style="color: blue;"> Terms & Conditions</a></label>
 		  </div>
-		  <button type="submit" class="btn btn-primary btn-block" id="tickets-checkout" aria-disabled="true">Checkout</button>
+		  <button type="submit" class="btn btn-primary btn-block" id="tickets-checkout" onclick="submit_tickets()">Checkout</button>
 		</form>
 	</div>
 </body>
