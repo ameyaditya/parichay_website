@@ -58,7 +58,7 @@
 			  	<div class="col-4 md-3"><label>Category</label></div>
 			  	<div class="col-4 md-3">
 		  		  <div class="form-check">
-					  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+					  <input class="form-check-input" type="radio" name="category" id="exampleRadios1" value="male" checked>
 					  <label class="form-check-label" for="exampleRadios1">
 					    Male
 					  </label>
@@ -66,7 +66,7 @@
 				</div>
 				<div class="col-4 md-3">
 					<div class="form-check">
-					  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+					  <input class="form-check-input" type="radio" name="category" id="exampleRadios2" value="female">
 					  <label class="form-check-label" for="exampleRadios2">
 					    Female
 					  </label>
@@ -75,7 +75,7 @@
 			</div>
 			<div class="form-group">
 				<label for="sub-category">Sub - Category</label>
-			      <select id="inputState" class="form-control" required>
+			      <select id="inputState" class="form-control" name="subcategory" required>
 			        <option selected>Student</option>
 			        <option>Teacher</option>
 			        <option>Corporate</option>
@@ -111,7 +111,7 @@
 		    <input type="checkbox" class="form-check-input" id="exampleCheck1" required>
 		    <label class="form-check-label" for="exampleCheck1">I have read the <a href="#" style="color: blue;"> Terms & Conditions</a></label>
 		  </div>
-		  <button type="submit" class="btn btn-primary btn-block" id="tickets-checkout" onclick="submit_tickets()">Checkout</button>
+		  <button type="submit" name="checkout" class="btn btn-primary btn-block" id="tickets-checkout" onclick="submit_tickets()">Checkout</button>
 		</form>
 	</div>
 </body>

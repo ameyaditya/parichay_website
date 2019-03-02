@@ -344,9 +344,9 @@ blockquote p {
 		display: initial;
 	}
 	#registerbtn{
-		width: 100px;
-		border-radius: 50%;
-		right: 20px;
+		width: 100%;
+		border-radius: 0%;
+		right: 0px;
 		height: 100px;
 		bottom: 20px;
 	}
