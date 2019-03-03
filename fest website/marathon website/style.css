@@ -90,7 +90,20 @@ pre {
 	border-radius: 4px;
 	padding: 10px;
 }
-
+#tshirt-sizes input[type="radio"]{
+	display: none;
+}
+#tshirt-sizes input[type="radio"]:checked + label{
+	border:solid 2px green;
+}
+.size-label{
+	display: inline-block;
+	text-align: center;
+	width: 100%;
+	padding: 10px;
+	border: solid 2px #ccc;
+	transition: all 0.3s;
+}
 pre code {
 	background-color: transparent;
 	color: #333;
@@ -171,11 +184,11 @@ blockquote p {
 }
 #registerbtn{
 	position: fixed;
-	bottom: 30px;
-	right: 30px;
-	height: 100px;
-	width: 150px;
-	border-radius: 20%;
+	bottom: 0px;
+	right: 0px;
+	height: 60px;
+	width: 100%;
+	//border-radius: 20%;
 	text-align: center;
 	z-index: 999;
 }
@@ -220,6 +233,35 @@ blockquote p {
 	margin-top: 40px;
 	background-color: #D5D5D5;
 	padding:20px;
+	margin-bottom: 60px;
+}
+.success-main{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: green;
+	height: 400px;
+}
+.fail-main{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: red;
+	height: 400px;
+}
+.fail-logo{
+	background-image: url("images/fail.png");
+	background-repeat: no-repeat;
+	background-size: contain;
+	height: 250px;
+	width: 250px;
+}
+.success-logo{
+	background-image: url("images/success2.png");
+	background-repeat: no-repeat;
+	background-size: contain;
+	height: 250px;
+	width: 250px;
 }
 .banner{
 	position: relative;
@@ -238,7 +280,7 @@ blockquote p {
 	bottom: 0;
 	right: 0;
 	left: 0;
-	background: url("images/homepage.jpeg") center center;
+	background: url("images/homepage2.jpeg") center center;
 	height: 100vh;
 	width: 100%;
 	background-repeat: no-repeat;
@@ -315,6 +357,10 @@ blockquote p {
 #marathon-header-small{
 		visibility: hidden;
 }
+.orderdetails{
+	margin-top: 20px;
+
+}
 .gallery{
 	height: 25vw;
 	background: url("images/sample-square.png");
@@ -336,6 +382,47 @@ blockquote p {
 	//margin-top: 100px;
 	margin-bottom: 0px;
 }
+.ticket-details{
+	margin-top: 40px;
+	background-color: #D5D5D5;
+	padding: 50px;
+	padding-bottom: 20px;
+	margin-bottom: 40px;
+}
+.events-images{
+	max-height: 350px;
+	background-size: contain;
+}
+.events-images img{
+	object-fit: contain;
+}
+
+#gallery1{
+	background-image: url("images/1.jpg");
+	padding:20px;
+}
+#gallery2{
+	background-image: url("images/2.jpg");
+}
+#gallery3{
+	background-image: url("images/3.jpg");
+}
+#gallery4{
+	background-image: url("images/4.jpg");
+}
+#gallery5{
+	background-image: url("images/5.jpg");
+}
+#gallery6{
+	background-image: url("images/6.jpg");
+}
+#gallery7{
+	background-image: url("images/7.jpg");
+}
+#gallery8{
+	background-image: url("images/8.jpeg");
+}
+
 @media screen and (max-width: 576px){
 	.desk-event{
 		display: none;
@@ -347,8 +434,30 @@ blockquote p {
 		width: 100%;
 		border-radius: 0%;
 		right: 0px;
+		height: 70px;
+		bottom: 0px;
+	}
+	.success-main{
+		height: 250px;
+	}
+	.fail-main{
+		height: 250px;
+	}
+	.fail-logo{
 		height: 100px;
-		bottom: 20px;
+		width: 100px;
+	}
+	.success-logo{
+		height: 100px;
+		width: 100px;
+	}
+	.banner .bg{
+		background: url("images/homepage.jpeg") center center;
+		background-repeat: no-repeat;
+		background-size: contain;
+	}
+	.ticket-details h1{
+		font-size: 1.5em;
 	}
 }
 @media screen and (max-width: 767px){
@@ -372,6 +481,7 @@ blockquote p {
 		height: auto;
 		margin-bottom: 30px;
 	}
+
 }
 
 #mu-pricing {
@@ -413,6 +523,7 @@ blockquote p {
 }
 .reg-form{
 	margin-top: 40px;
+	margin-bottom: 60px;
 }
 .reg-form h1{
 	margin-bottom: 30px;
@@ -496,7 +607,14 @@ blockquote p {
 	-webkit-transition: all 0.5s;
 	transition: all 0.5s;
 }
-
+.indv-details{
+	//margin: 30px;
+	padding-top: 15px;
+	padding-bottom: 20px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
 .mu-primary-btn:hover,
 .mu-primary-btn:focus {
 	background-color: #fff;
@@ -542,6 +660,10 @@ blockquote p {
 	transform: rotate(-45deg);
 	text-align: center;
 
+}
+.backtohome{
+	text-align: left;
+	margin-top: 50px;
 }
  .mu-price-tag{
  	 background-color: red;

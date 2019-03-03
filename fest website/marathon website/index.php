@@ -1,7 +1,10 @@
+<?php 
+session_unset();
+?>
 <!DOCTYPE html>
 <html>
 <head>
-	<title>RNSIT - Marathon</title>
+	<title>Step Up 2.0</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -20,9 +23,9 @@
 
 </head>
 <body>
-	<button class="btn btn-secondary btn-success" id="registerbtn" onclick="window.location.href='marathon-tickets.php'">Register<br> Now</button>
+	<button class="btn btn-secondary btn-success" id="registerbtn" onclick="window.location.href='marathon-tickets'">Register Now</button>
 	<nav class="navbar navbar-expand-lg navbar-light bg-light">
-		<a href="index.php" class="navbar-brand">Parichay Marathon</a>
+		<a href="index" class="navbar-brand">Step Up 2.0</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
 			<ul class="navbar-nav mr-auto">
@@ -36,7 +39,7 @@
 					<a href="#mu-pricing" class="nav-link">Pricing</a>
 				</li>
 				<li>
-					<a href="#eventgallery" class="nav-link" id="">Event Gallery</a>
+					<a href="#eventgallery" class="nav-link">Event Gallery</a>
 				</li>
 				<!--
 				<li>
@@ -71,7 +74,7 @@
 		</div>
 	</div>
 	<div class="container">
-		<h2 class="mu-title" id="aboutmarathon">About Marathon</h2>
+		<h2 class="mu-title" id="aboutmarathon">About Step Up 2.0</h2>
 		<p class="lead">Run, because we owe it to them.
 Run, so that those roars, chirps, growls don't fade away to silence .
 Tie those shoe laces tight and break the sweat, run it to save the wildlife.
@@ -109,7 +112,7 @@ So, Step-Up Bengaluru!
 							
 							<div class="mu-title-area">
 								<h2 class="mu-title">Pricing plans</h2>
-								<p>Choose the plan that suits you the best and get ready to run!</p>
+								<p class="lead">Choose the plan that suits you the best and get ready to run!</p>
 							</div>
 							
 							<div class="mu-pricing-conten">
@@ -156,7 +159,7 @@ So, Step-Up Bengaluru!
 				
 							</div>
 							<div class="container">
-								<button class="btn btn-primary btn-lg btn-block btn-danger" onclick="window.location = 'marathon-tickets.php'">Buy Tickets</button>
+								<button class="btn btn-primary btn-lg btn-block btn-danger" onclick="window.location = 'marathon-tickets'">Buy Tickets</button>
 						</div>
 					</div>
 				</div>
@@ -169,8 +172,8 @@ So, Step-Up Bengaluru!
 
 
 
-	<div class="container-fluid event-box" id="eventgallery">
-		<h1 class="mu-title">Event Gallery</h1>
+	<div class="container-fluid event-box" >
+		<h1 class="mu-title" id="eventgallery">Event Gallery</h1>
 		<div class="desk-event">
 		<div class="row">
 				<div class="col-sm-3 gallery" id="gallery1">
@@ -186,15 +189,15 @@ So, Step-Up Bengaluru!
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-sm-3 gallery" id="gallery1">
+				<div class="col-sm-3 gallery" id="gallery5">
 				</div>
-				<div class="col-sm-3 gallery" id="gallery2">
+				<div class="col-sm-3 gallery" id="gallery6">
 					
 				</div>
-				<div class="col-sm-3 gallery" id="gallery3">
+				<div class="col-sm-3 gallery" id="gallery7">
 					
 				</div>
-				<div class="col-sm-3 gallery" id="gallery4">
+				<div class="col-sm-3 gallery" id="gallery8">
 					
 				</div>
 			</div>
@@ -202,14 +205,29 @@ So, Step-Up Bengaluru!
 		<div class="mobile-event">
 			<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
 			  <div class="carousel-inner">
-			    <div class="carousel-item active">
-			      <img class="d-block w-100" src="images/sample-square.png" alt="First slide">
+			    <div class="carousel-item active events-images">
+			      <img class="d-block w-100" src="images/1.jpg" alt="First slide">
 			    </div>
-			    <div class="carousel-item">
-			      <img class="d-block w-100" src="images/sample-square.png" alt="Second slide">
+			    <div class="carousel-item events-images">
+			      <img class="d-block w-100" src="images/2.jpg" alt="Second slide">
 			    </div>
-			    <div class="carousel-item">
-			      <img class="d-block w-100" src="images/sample-square.png" alt="Third slide">
+			    <div class="carousel-item events-images">
+			      <img class="d-block w-100" src="images/3.jpg" alt="Third slide">
+			    </div>
+			    <div class="carousel-item events-images">
+			      <img class="d-block w-100" src="images/4.jpg" alt="Third slide">
+			    </div> 
+			    <div class="carousel-item events-images">
+			      <img class="d-block w-100" src="images/5.jpg" alt="Third slide">
+			    </div>
+			    <div class="carousel-item events-images">
+			      <img class="d-block w-100" src="images/6.jpg" alt="Third slide">
+			    </div>
+			    <div class="carousel-item events-images">
+			      <img class="d-block w-100" src="images/7.jpg" alt="Third slide">
+			    </div>
+			    <div class="carousel-item events-images">
+			      <img class="d-block w-100" src="images/8.jpeg" alt="Third slide">
 			    </div>
 			  </div>
 			  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">

@@ -5,4 +5,5 @@
 	const DB_NAME = 'parichay_marathon';
 	const merchantMid = "qXpShT71788695022363";
 	const merchantKey = "hzCa6Abazym!!fBD";
+	const SALT = "iamverygoodatmathematicsinbiologyatcarjockeyrides.";
 	?>
