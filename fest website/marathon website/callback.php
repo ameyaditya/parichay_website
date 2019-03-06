@@ -17,10 +17,14 @@ $CURRENCY = isset($_POST['CURRENCY']) ?$_POST['CURRENCY']: "";
 $STATUS = isset($_POST['STATUS']) ?$_POST['STATUS']: "";
 $RESPCODE = isset($_POST['RESPCODE']) ?$_POST['RESPCODE']: "";
 $RESPMSG = isset($_POST['RESPMSG']) ?$_POST['RESPMSG']: "";
-$TXNDATE = isset($_POST['TXNDATE']) ?$_POST['TXNDATE']: "";
+$TXNDATE = isset($_POST['TXNDATE']) ?$_POST['TXNDATE']: "NULL";
 $GATEWAYNAME = isset($_POST['GATEWAYNAME']) ?$_POST['GATEWAYNAME']: "";
 $PAYMENTMODE = isset($_POST['PAYMENTMODE']) ?$_POST['PAYMENTMODE']: "";
-$insert_det = "INSERT INTO callback_Details(TXNID, ORDERID, CUST_ID, BANKTXNID, TXNAMOUNT, CURRENCY, STATUS, RESPCODE, RESPMSG, TXNDATE, GATEWAYNAME, PAYMENTMODE) VALUES ('$TXNID', '$ORDERID', '$CUST_ID', '$BANKTXNID', '$TXNAMOUNT', '$CURRENCY', '$STATUS', '$RESPCODE', '$RESPMSG', '$TXNDATE', '$GATEWAYNAME', '$PAYMENTMODE')";
+if($TXNDATE == "NULL"){
+	$insert_det = "INSERT INTO callback_details(TXNID, ORDERID, CUST_ID, BANKTXNID, TXNAMOUNT, CURRENCY, STATUS, RESPCODE, RESPMSG, GATEWAYNAME, PAYMENTMODE) VALUES ('$TXNID', '$ORDERID', '$CUST_ID', '$BANKTXNID', '$TXNAMOUNT', '$CURRENCY', '$STATUS', '$RESPCODE', '$RESPMSG', '$GATEWAYNAME', '$PAYMENTMODE')";
+}else{
+	$insert_det = "INSERT INTO callback_details(TXNID, ORDERID, CUST_ID, BANKTXNID, TXNAMOUNT, CURRENCY, STATUS, RESPCODE, RESPMSG, TXNDATE, GATEWAYNAME, PAYMENTMODE) VALUES ('$TXNID', '$ORDERID', '$CUST_ID', '$BANKTXNID', '$TXNAMOUNT', '$CURRENCY', '$STATUS', '$RESPCODE', '$RESPMSG', '$TXNDATE', '$GATEWAYNAME', '$PAYMENTMODE')";
+}
 mysqli_query($con, $insert_det);
 $hashstring = $orderid."/".$merchmid."@".$amount;
 $hashed_value = crypt($hashstring, SALT);
@@ -41,6 +45,23 @@ if(mysqli_num_rows($res) > 0){
 <head>
 	<title>Step Up 2.0 - Transaction Status</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="images/favicon/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="images/favicon/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="images/favicon/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="images/favicon/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="images/favicon/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="images/favicon/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="images/favicon/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="images/favicon/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+	<link rel="manifest" href="images/favicon/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="images/favicon/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
@@ -70,6 +91,8 @@ if($validated == 1){
 	$row = mysqli_fetch_assoc($res);
 	$name = $row['name'];
 	$email = $row['email_id'];
+	$category = $row['category'];
+	$subcategory = $row['sub_category'];
 	$basic = $row['basic_ticket'];
 	$standard = $row['standard_ticket'];
 ?>
@@ -84,7 +107,7 @@ if($validated == 1){
 		<div class=" orderdetails">
 			<div class="row">
 				<div class="col-4">
-					<b>Order ID</b><br><small>Save the Order ID for Future References.</small>
+					<b>Order ID</b>
 				</div>
 				<div class="col-1">
 					<b>:</b>
@@ -106,13 +129,24 @@ if($validated == 1){
 			</div>
 			<div class="row">
 				<div class="col-4">
-					<b>Email ID</b>
+					<b>Category</b>
 				</div>
 				<div class="col-1">
 					<b>:</b>
 				</div>
 				<div class="col-6">
-					<p class="lead"><?php echo $email;?></p>
+					<p class="lead"><?php echo $category;?></p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-4">
+					<b>Sub Category</b>
+				</div>
+				<div class="col-1">
+					<b>:</b>
+				</div>
+				<div class="col-6">
+					<p class="lead"><?php echo $subcategory;?></p>
 				</div>
 			</div>
 		</div>
@@ -122,6 +156,7 @@ if($validated == 1){
 			if($standard > 0){ ?>
 				<div class="row"><div class="col-5">Standard Ticket</div><div class="col-2">X</div><div class="col-5"><?php echo $standard; ?></div></div>
 			<?php } ?>
+			<div class="invoice"><a href=<?php echo '"'."invoice.php?orderid=".$orderid.'"'?>>Download Ticket Invoice</a></div>
 			<div class="backtohome"><a href="index.php">Back to Homepage</a></div>
 		</div>
 	</div>

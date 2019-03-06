@@ -28,6 +28,21 @@ a {
 	text-decoration: none;
 	color: #2f2f2f;  
 }
+.invoice{
+	align-self: center;
+	font-size: 1.2em;
+	padding: 10px;
+	background-color: gray;
+	color: white;
+	margin-top: 30px;
+}
+.invoice a{
+	text-decoration: none;
+}
+.invoice a:hover{
+	text-decoration: none;
+	color: white;
+}
 
 a:hover,
 a:focus {
@@ -388,6 +403,8 @@ blockquote p {
 	padding: 50px;
 	padding-bottom: 20px;
 	margin-bottom: 40px;
+	display: flex;
+	flex-direction: column;
 }
 .events-images{
 	max-height: 350px;
@@ -398,11 +415,11 @@ blockquote p {
 }
 
 #gallery1{
-	background-image: url("images/1.jpg");
+	background-image: url("images/5.jpg");
 	padding:20px;
 }
 #gallery2{
-	background-image: url("images/2.jpg");
+	background-image: url("images/6.jpg");
 }
 #gallery3{
 	background-image: url("images/3.jpg");
@@ -411,10 +428,10 @@ blockquote p {
 	background-image: url("images/4.jpg");
 }
 #gallery5{
-	background-image: url("images/5.jpg");
+	background-image: url("images/1.jpg");
 }
 #gallery6{
-	background-image: url("images/6.jpg");
+	background-image: url("images/2.jpg");
 }
 #gallery7{
 	background-image: url("images/7.jpg");

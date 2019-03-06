@@ -26,7 +26,7 @@
 		$basic = (int)$_POST['basic'];
 		$standard = (int)$_POST['standard'];
 		$customerid = preg_replace('/\s+/', '', $name).$orderid;
-		$amount = $basic * 250 + $standard * 350;
+		$amount = $basic * 200 + $standard * 320;
 		for($i = 0;$i < $standard;$i++){
 			$sz = $_POST['size-'.$i];
 			switch($sz){
@@ -48,12 +48,45 @@
 			}
 		}
 		$usn = isset($_POST['usn']) ? $_POST['usn']:"";
+		$student_dept = "";
+		$deptcode = "";
+		if( $usn != ''){
+			$deptcode = strtoupper(substr($usn, 5, 2));
+			switch($deptcode){
+				case 'IS':
+					$student_dept = "Information Science and Engineering";
+					break;
+				case 'CS':
+					$student_dept = "Computer Science and Engineering";
+					break;
+				case 'EE':
+					$student_dept = "Electrical and Electronics Engineering";
+					break;
+				case 'EC':
+					$student_dept = "Electronics and Communication Engineering";
+					break;
+				case 'CV':
+					$student_dept = "Civil Engineering";
+					break;
+				case 'IT':
+					$student_dept = "Instrumentation Engineering";
+					break;
+				case 'ME':
+					$student_dept = "Mechanical Engineering";
+					break;
+				default:
+					$student_dept = "Following code found: ".$deptcode;
+					break;
+			}
+		}
+
+		
 		$department = isset($_POST['department']) ? $_POST['department']: "";
 		$company = isset($_POST['company']) ? $_POST['company'] : "";
 		$stringtohash = $orderid."/".merchantMid."@".$amount;
 		$hashed = crypt($stringtohash, SALT);
 		$con = mysqli_connect(DB_HOST, DB_USER, DB_PASS, DB_NAME);
-		$query = "INSERT INTO payment_submit(order_id, name, email_id, phone_no, category, sub_category, usn, department, company, basic_ticket, standard_ticket, amount, S, M, L, XL, XXL) VALUES ('$orderid', '$name', '$email', '$phone', '$category', '$sub_category', '$usn', '$department', '$company', $basic, $standard, $amount, $S, $M, $L, $XL, $XXL)";
+		$query = "INSERT INTO payment_submit(order_id, name, email_id, phone_no, category, sub_category, usn, student_dept , department, company, basic_ticket, standard_ticket, amount, S, M, L, XL, XXL) VALUES ('$orderid', '$name', '$email', '$phone', '$category', '$sub_category', '$usn', '$student_dept', '$department', '$company', $basic, $standard, $amount, $S, $M, $L, $XL, $XXL)";
 		mysqli_query($con, $query);
 		$hashquery = "INSERT INTO hash_table(order_id, hash) VALUES ('$orderid', '$hashed')";
 		mysqli_query($con, $hashquery);

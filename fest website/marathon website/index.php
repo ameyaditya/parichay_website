@@ -6,6 +6,23 @@ session_unset();
 <head>
 	<title>Step Up 2.0</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="images/favicon/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="images/favicon/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="images/favicon/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="images/favicon/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="images/favicon/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="images/favicon/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="images/favicon/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="images/favicon/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+	<link rel="manifest" href="images/favicon/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="images/favicon/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
@@ -91,7 +108,7 @@ So, Step-Up Bengaluru!
 			</div>
 			<div class="col-md-3 event-item align-self-center">
 				<div id="date" class="events-icons"></div>
-				March 24th, 2019
+				March 24th, 2019<br>6:30 AM
 			</div>
 			<div class="col-md-3 event-item align-self-center">
 				<div id="breakfast" class="events-icons"></div>
@@ -123,14 +140,15 @@ So, Step-Up Bengaluru!
 
 											<div class="mu-single-price-head">
 												<span class="mu-currency">Rs.</span>
-												<span class="mu-rate">250</span>
+												<span class="mu-rate">200</span>
 												<span class="mu-time">/per head</span>
 											</div>
 											<h3 class="mu-price-title">BASIC</h3>
 											<ul>
-												<li>Basic Ticket</li>
-												<li>Free Breakfast</li>
-												<li>Winners medal</li>
+												<li>1 marathon Ticket</li>
+												<li>Breakfast</li>
+												<li>Refreshments</li>
+												<li>Finishers medal</li>
 											</ul>
 											
 										</div>
@@ -143,15 +161,16 @@ So, Step-Up Bengaluru!
 											<span class="mu-price-tag">Popular</span>
 											<div class="mu-single-price-head">
 												<span class="mu-currency">Rs.</span>
-												<span class="mu-rate">350</span>
+												<span class="mu-rate">320</span>
 												<span class="mu-time">/per head</span>
 											</div>
 											<h3 class="mu-price-title">STANDARD</h3>
 											<ul>
-												<li>Basic Ticket</li>
-												<li>Free Breakfast</li>
-												<li>Winners medal</li>
-												<li>Marathon T-Shirt</li>
+												<li>1 Marathon Ticket</li>
+												<li>Breakfast</li>
+												<li>Refreshments</li>
+												<li>Finishers medal</li>
+												<li>Official T-Shirt</li>
 											</ul>
 										</div>
 									</div>
@@ -206,10 +225,10 @@ So, Step-Up Bengaluru!
 			<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
 			  <div class="carousel-inner">
 			    <div class="carousel-item active events-images">
-			      <img class="d-block w-100" src="images/1.jpg" alt="First slide">
+			      <img class="d-block w-100" src="images/5.jpg" alt="First slide">
 			    </div>
 			    <div class="carousel-item events-images">
-			      <img class="d-block w-100" src="images/2.jpg" alt="Second slide">
+			      <img class="d-block w-100" src="images/6.jpg" alt="Second slide">
 			    </div>
 			    <div class="carousel-item events-images">
 			      <img class="d-block w-100" src="images/3.jpg" alt="Third slide">
@@ -218,10 +237,10 @@ So, Step-Up Bengaluru!
 			      <img class="d-block w-100" src="images/4.jpg" alt="Third slide">
 			    </div> 
 			    <div class="carousel-item events-images">
-			      <img class="d-block w-100" src="images/5.jpg" alt="Third slide">
+			      <img class="d-block w-100" src="images/1.jpg" alt="Third slide">
 			    </div>
 			    <div class="carousel-item events-images">
-			      <img class="d-block w-100" src="images/6.jpg" alt="Third slide">
+			      <img class="d-block w-100" src="images/2.jpg" alt="Third slide">
 			    </div>
 			    <div class="carousel-item events-images">
 			      <img class="d-block w-100" src="images/7.jpg" alt="Third slide">

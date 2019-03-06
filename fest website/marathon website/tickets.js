@@ -5,7 +5,7 @@ $(document).ready(function(){
 		console.log("Changed");
 		var basic = document.getElementById('basic').value;
 		var standard = document.getElementById('standard').value;
-		totalamt = basic*250 + standard*350;
+		totalamt = basic*200 + standard*320;
 		$('#total h1 span').text('Rs. ' + totalamt);
 	});
 	$('#subcategory').change(function(){
@@ -25,7 +25,7 @@ $(document).ready(function(){
 		
 			document.getElementById('dynamic-subcat').innerHTML = code;
 		}
-		if(selsubcat == "Teacher - RNSIT"){
+		if(selsubcat == "Staff - RNSIT"){
 			var code = `<div class="form-row">
 						<div class="col-6 md-3"><label for="department">Department</label></div>
 						<div class="col-6 md-3">
@@ -34,7 +34,7 @@ $(document).ready(function(){
 						        <option>Computer Science and Engineering</option>
 						        <option>Electronics and Communication Engineering</option>
 						        <option>Electrical and Electronics Engineering</option>
-						        <option>Electronics and Instrumentation Engineering</option>
+						        <option>Instrumentation Engineering</option>
 						        <option>Mechanical Engineering</option>
 						        <option>Information Science and Engineering</option>
 						        <option>Chemistry</option>
@@ -58,7 +58,10 @@ $(document).ready(function(){
 						</div></div>`;
 			document.getElementById('dynamic-subcat').innerHTML = code;
 		}
-		if(selsubcat == "Open"){
+		if(selsubcat == "Public"){
+			document.getElementById('dynamic-subcat').innerHTML = "";
+		}
+		if(selsubcat == "Senior Citizen"){
 			document.getElementById('dynamic-subcat').innerHTML = "";
 		}
 	});
@@ -67,7 +70,7 @@ $(document).ready(function(){
 		console.log("Changed");
 		var basic = document.getElementById('basic').value;
 		var standard = document.getElementById('standard').value;
-		totalamt = basic*250 + standard*350;
+		totalamt = basic*200 + standard*320;
 		var text = "";
 		for(i = 0; i < standard; i++){
 			text += '<div class="form-row form-group"><div class="col-2 md-3"><label>T-Shirt '+(i+1)+' size</label></div>';
@@ -113,6 +116,8 @@ function submit_tickets(){
 	else{
 		document.getElementById('tickets-form').setAttribute("action", "payment");
 		document.getElementById('tickets-form').submit();
+		return true;
 	}
+	return false;
 }
 

@@ -1,0 +1,53 @@
+CREATE TABLE `payment_submit` (
+ `ID` int(11) NOT NULL AUTO_INCREMENT,
+ `order_id` varchar(13) COLLATE utf8_unicode_ci NOT NULL,
+ `name` varchar(30) COLLATE utf8_unicode_ci NOT NULL,
+ `email_id` varchar(30) COLLATE utf8_unicode_ci NOT NULL,
+ `phone_no` varchar(10) COLLATE utf8_unicode_ci NOT NULL,
+ `category` varchar(10) COLLATE utf8_unicode_ci NOT NULL,
+ `sub_category` varchar(10) COLLATE utf8_unicode_ci NOT NULL,
+ `usn` varchar(15) COLLATE utf8_unicode_ci NOT NULL,
+ `department` varchar(40) COLLATE utf8_unicode_ci NOT NULL,
+ `company` varchar(30) COLLATE utf8_unicode_ci NOT NULL,
+ `basic_ticket` mediumint(9) NOT NULL,
+ `standard_ticket` mediumint(9) NOT NULL,
+ `amount` float NOT NULL,
+ `S` int(11) NOT NULL,
+ `M` int(11) NOT NULL,
+ `L` int(11) NOT NULL,
+ `XL` int(11) NOT NULL,
+ `XXL` int(11) NOT NULL,
+ `status` int(11) NOT NULL DEFAULT 0,
+ PRIMARY KEY (`ID`)
+)
+
+CREATE TABLE `callback_details` (
+ `ID` int(11) NOT NULL AUTO_INCREMENT,
+ `TXNID` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+ `ORDERID` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+ `CUST_ID` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+ `BANKTXNID` text COLLATE utf8_unicode_ci NOT NULL,
+ `TXNAMOUNT` varchar(10) COLLATE utf8_unicode_ci NOT NULL,
+ `CURRENCY` varchar(5) COLLATE utf8_unicode_ci NOT NULL,
+ `STATUS` varchar(25) COLLATE utf8_unicode_ci NOT NULL,
+ `RESPCODE` varchar(10) COLLATE utf8_unicode_ci NOT NULL,
+ `RESPMSG` text COLLATE utf8_unicode_ci NOT NULL,
+ `TXNDATE` datetime NOT NULL,
+ `GATEWAYNAME` varchar(15) COLLATE utf8_unicode_ci NOT NULL,
+ `PAYMENTMODE` varchar(10) COLLATE utf8_unicode_ci NOT NULL,
+ PRIMARY KEY (`ID`)
+)
+
+
+CREATE TABLE `hash_table` (
+ `ID` int(11) NOT NULL AUTO_INCREMENT,
+ `order_id` varchar(13) COLLATE utf8_unicode_ci NOT NULL,
+ `hash` varchar(200) COLLATE utf8_unicode_ci NOT NULL,
+ PRIMARY KEY (`ID`)
+) 
+
+CREATE TABLE `review_order` (
+ `ID` int(11) NOT NULL AUTO_INCREMENT,
+ `order_id` varchar(13) COLLATE utf8_unicode_ci NOT NULL,
+ PRIMARY KEY (`ID`)
+)

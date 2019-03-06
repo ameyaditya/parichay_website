@@ -8,6 +8,23 @@ $_SESSION['registering_form'] = 1;
 <head>
 	<title>Step Up 2.0- Register</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="images/favicon/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="images/favicon/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="images/favicon/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="images/favicon/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="images/favicon/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="images/favicon/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="images/favicon/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="images/favicon/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+	<link rel="manifest" href="images/favicon/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="images/favicon/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="style.css">
@@ -34,20 +51,20 @@ $_SESSION['registering_form'] = 1;
 		  <tbody>
 		    <tr>
 		      <th scope="row">1</th>
-		      <td>Basic (Marathon Ticket)</td>
-		      <td>Rs: 250</td>
+		      <td>Basic (Marathon Ticket, breakfast, refreshments, finishers medal)</td>
+		      <td>Rs: 200</td>
 		    </tr>
 		    <tr>
 		      <th scope="row">2</th>
-		      <td>Standard (Marathon Ticket + T-Shirt)</td>
-		      <td>Rs: 350</td>
+		      <td>Standard (Marathon Ticket, official T-Shirt, breakfast, refreshments, finishers medal)</td>
+		      <td>Rs: 320</td>
 		    </tr>
 		  </tbody>
 		</table>
 	</div>
 	<div class="container reg-form">
 		<h1>Registration Form</h1>
-		<form id="tickets-form" method="POST"> 
+		<form id="tickets-form" method="POST" onsubmit="return submit_tickets()"> 
 		  <div class="form-group">
 		    <label for="customername">Name</label>
 		    <input type="text" class="form-control" id="customername" name="customername"  placeholder="Enter Name" required>
@@ -84,9 +101,10 @@ $_SESSION['registering_form'] = 1;
 			      <select id="subcategory" class="form-control" name="subcategory" required>
 			      	<option selected>Choose a sub-category</option>
 			        <option>Student - RNSIT</option>
-			        <option>Teacher - RNSIT</option>
+			        <option>Staff - RNSIT</option>
 			        <option>Corporate</option>
-			        <option>Open</option>
+			        <option>Senior Citizen</option>
+			        <option>Public</option>
 			      </select>
 			</div>
 			<div class="form-group" id="dynamic-subcat">
@@ -124,7 +142,7 @@ $_SESSION['registering_form'] = 1;
 		    <input type="checkbox" class="form-check-input" id="termscheck" required>
 		    <label class="form-check-label" for="termscheck">I have read the <a href="#" style="color: blue;"> Terms & Conditions</a></label>
 		  </div>
-		  <button type="submit" name="checkout" class="btn btn-primary btn-block" id="tickets-checkout" onclick="submit_tickets()">Checkout</button>
+		  <button type="submit" name="checkout" class="btn btn-primary btn-block" id="tickets-checkout">Checkout</button>
 		</form>
 	</div>
 </body>
