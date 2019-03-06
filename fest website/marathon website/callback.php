@@ -1,7 +1,7 @@
 <?php
 session_start();
 if(!isset($_SESSION['registering_form'])){
-	header("Location: index.php");
+	header("Location: mainpage.php");
 }
 require_once("config.php");
 $con = mysqli_connect(DB_HOST, DB_USER, DB_PASS, DB_NAME);
@@ -78,7 +78,7 @@ if(mysqli_num_rows($res) > 0){
 </head>
 <body>
 	<nav class="navbar navbar-expand-lg navbar-light bg-light">
-		<a href="index" class="navbar-brand">Step Up 2.0</a>
+		<a href="mainpage" class="navbar-brand">Step Up 2.0</a>
 	</nav>
 	<?php 
 if($validated == 1){
@@ -157,7 +157,7 @@ if($validated == 1){
 				<div class="row"><div class="col-5">Standard Ticket</div><div class="col-2">X</div><div class="col-5"><?php echo $standard; ?></div></div>
 			<?php } ?>
 			<div class="invoice"><a href=<?php echo '"'."invoice.php?orderid=".$orderid.'"'?>>Download Ticket Invoice</a></div>
-			<div class="backtohome"><a href="index.php">Back to Homepage</a></div>
+			<div class="backtohome"><a href="mainpage.php">Back to Homepage</a></div>
 		</div>
 	</div>
 <?php }
@@ -246,7 +246,7 @@ else{
 			if($standard > 0){ ?>
 				<div class="row"><div class="col-5">Standard Ticket</div><div class="col-2">X</div><div class="col-5"><?php echo $standard; ?></div></div>
 			<?php } ?>
-			<div class="backtohome"><a href="index.php">Back to Homepage</a></div>
+			<div class="backtohome"><a href="mainpage.php">Back to Homepage</a></div>
 		</div>
 </div>
 

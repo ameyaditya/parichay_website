@@ -1,7 +1,7 @@
 <?php
 	session_start();
 	if(!isset($_SESSION['registering_form']) || !isset($_POST['checkout'])){
-		header("Location: index");
+		header("Location: mainpage");
 	}
 	header("Pragma: no-cache");
 	header("Cache-Control: no-cache");

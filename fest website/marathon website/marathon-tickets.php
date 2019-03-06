@@ -36,7 +36,7 @@ $_SESSION['registering_form'] = 1;
 </head>
 <body>
 	<nav class="navbar navbar-expand-lg navbar-light bg-light">
-		<a href="index" class="navbar-brand">Step Up 2.0</a>
+		<a href="mainpage" class="navbar-brand">Step Up 2.0</a>
 	</nav>
 	<div class="container price-header">
 		<h1>Pricing Plans</h1>
