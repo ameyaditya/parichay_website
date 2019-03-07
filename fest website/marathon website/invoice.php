@@ -13,12 +13,20 @@
 	$category = $row['category'];
 	$subcategory = $row['sub_category'];
 	$status = $row['status'];
+	$encrypt_method = "AES-256-CBC";
+    $secret_key = 'whatislife?';
+    $secret_iv = 'lifeissomethingweird';
+    $key = hash('sha256', $secret_key);
+    $iv = substr(hash('sha256', $secret_iv), 0, 16);
+    $output = openssl_encrypt($orderid, $encrypt_method, $key, 0, $iv);
+    $output = base64_encode($output);
 	if($status == 1){
 		$invoice = new InvoicePrinter();
 		/* Header Settings */
 		$invoice->setLogo("images/CAT-LOGO.png");
 		$invoice->setColor("#677a1a");
 		$invoice->setType("Ticket Invoice");
+		$invoice->setUrl("https://chart.googleapis.com/chart?chs=200x200&cht=qr&chl=".$output);
 		$invoice->setReference($orderid);
 		$invoice->setDate(date('d-m-Y',time()));
 		$invoice->setTime(date('h:i:s A',time()));	
@@ -36,12 +44,13 @@
 		/* Add totals */
 		$invoice->addTotal("Total",($basic*200 + $standard*320));
 
-		$invoice->addBadge("Payment Paid");
+		//$invoice->addBadge("Payment Paid");
 		$invoice->addTitle("Rules and Regulations");
 		$invoice->addParagraph("No item will be replaced or refunded if you don't have the invoice with you.\nYou can refund within 2 days of purchase.");
 		$invoice->setFooternote("CAT - RNSIT");
 		/* Render */
-		$invoice->render('StepupTicket.pdf','D');
+		$invoice->render('StepupTicket.pdf','I');
 	}
+
 ?>
 

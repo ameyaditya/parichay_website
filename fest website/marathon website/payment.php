@@ -96,7 +96,7 @@
 	    define("mobileNo", $phone);
 	    define("email", $email);
 	    define("txnAmount",(string)$amount);
-	    define("website", "WEBSTAGING");
+	    define("website", "DEFAULT");
 	    define("industryTypeId", "Retail");
 	    define("callbackUrl", "https://parichaymarathon.000webhostapp.com/callback.php");
 	    $paytmChecksum = "";
@@ -113,7 +113,7 @@
 	    $paytmParams["CALLBACK_URL"] = callbackUrl;
 	    $paytmParams["CALLBACK_URL"] = "http://localhost:8093/marathon%20website/callback";
 	    $paytmChecksum = getChecksumFromArray($paytmParams, merchantKey);
-	    $transactionURL = "https://securegw-stage.paytm.in/theia/processTransaction";
+	    $transactionURL = "https://securegw.paytm.in/theia/processTransaction";
 	}
 /*
 	$k5 = $_POST['basic'];

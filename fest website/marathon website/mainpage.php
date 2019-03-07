@@ -79,7 +79,15 @@ session_unset();
 			</div>
 		</div>		
 	</div>
-
+	<div class="quote-container container">
+            <blockquote>
+                <p>"Run, because we owe it to them.
+Run, so that those roars, chirps, growls don't fade away to silence .
+Tie those shoe laces tight and break the sweat, run it to save the wildlife.
+A marathon is taking place at RNSIT on the 24th of March. 
+So, Step-Up Bengaluru!</p>
+            </blockquote>
+        </div>
 	<div class="counter">
 		<div class="container">
 			<div class="flex-container ">
@@ -92,11 +100,12 @@ session_unset();
 	</div>
 	<div class="container">
 		<h2 class="mu-title" id="aboutmarathon">About Step Up 2.0</h2>
-		<p class="lead">Run, because we owe it to them.
+		<p class="lead"><!--Run, because we owe it to them.
 Run, so that those roars, chirps, growls don't fade away to silence .
 Tie those shoe laces tight and break the sweat, run it to save the wildlife.
 A marathon is taking place at RNSIT on the 24th of March. 
-So, Step-Up Bengaluru! 
+So, Step-Up Bengaluru! -->
+Step-up Bengaluru is an annual marathon hosted by RNSIT. Every year, hundreds of runners of all age groups from all over the city gather to do what they do best: Run. And with Step-up, you always run for a cause. Both winners and finishers get a shiny medal and of course there's breakfast and refreshments for everyone. So wait no more, put on your running shoes, wake up that athletic spirit within you and Step-up, Bengaluru!
 
 </p>
 	</div>

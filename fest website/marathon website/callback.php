@@ -1,8 +1,9 @@
 <?php
 session_start();
+/*
 if(!isset($_SESSION['registering_form'])){
 	header("Location: mainpage.php");
-}
+}*/
 require_once("config.php");
 $con = mysqli_connect(DB_HOST, DB_USER, DB_PASS, DB_NAME);
 $orderid = isset($_POST['ORDERID']) ? $_POST['ORDERID'] : "";
@@ -104,6 +105,18 @@ if($validated == 1){
 
 	<div class="container ticket-details">
 		<h1>Transaction Successful: Rs. <?php echo $amount;?></h1><?php if($basic > 0){ ?>
+			<div>
+				<?php 
+				$encrypt_method = "AES-256-CBC";
+			    $secret_key = 'whatislife?';
+			    $secret_iv = 'lifeissomethingweird';
+			    $key = hash('sha256', $secret_key);
+			    $iv = substr(hash('sha256', $secret_iv), 0, 16);
+			    $output = openssl_encrypt($orderid, $encrypt_method, $key, 0, $iv);
+			    $output = base64_encode($output);
+    			?>
+				<img src=<?php  echo '"https://chart.googleapis.com/chart?chs=300x300&cht=qr&chl='.$output.'"' ?> title="Sample QR">
+			</div>
 		<div class=" orderdetails">
 			<div class="row">
 				<div class="col-4">

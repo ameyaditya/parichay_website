@@ -48,6 +48,7 @@ class InvoicePrinter extends FPDF
     public $addText;
     public $footernote;
     public $dimensions;
+    public $url;
     public $display_tofrom = true;
     protected $columns;
 
@@ -155,7 +156,9 @@ class InvoicePrinter extends FPDF
 
         return true;
     }
-
+    public function setUrl($urls){
+        $this->url = (string)$urls;
+    }
     public function setTimeZone($zone = "")
     {
         if (!empty($zone) and $this->isValidTimezoneId($zone) === true) {
@@ -300,6 +303,7 @@ class InvoicePrinter extends FPDF
     public function render($name = '', $destination = '')
     {
         $this->AddPage();
+
         $this->Body();
         $this->AliasNbPages();
         return $this->Output($destination, $name);
@@ -309,7 +313,7 @@ class InvoicePrinter extends FPDF
     {
         if (isset($this->logo) and !empty($this->logo)) {
             $this->Image($this->logo, $this->margins['l'], $this->margins['t'], $this->dimensions[0],
-                $this->dimensions[1]);
+                $this->dimensions[1],'PNG');
         }
 
         //Title
@@ -366,6 +370,7 @@ class InvoicePrinter extends FPDF
             $this->SetTextColor(50, 50, 50);
             $this->SetFont($this->font, '', 9);
             $this->Cell(0, $lineheight, $this->due, 0, 1, 'R');
+
         }
 
         //First page
@@ -459,6 +464,7 @@ class InvoicePrinter extends FPDF
 
     public function Body()
     {
+
         $width_other = ($this->document['w'] - $this->margins['l'] - $this->margins['r'] - $this->firstColumnWidth - ($this->columns * $this->columnSpacing)) / ($this->columns - 1);
         $cellHeight  = 8;
         $bgcolor     = (1 - $this->columnOpacity) * 255;
@@ -576,11 +582,12 @@ class InvoicePrinter extends FPDF
         }
         $this->productsEnded = true;
         $this->Ln();
-        $this->Ln(3);
-
+        $this->Ln(4);
+        $this->Image($this->url,null,null,0,0,'PNG');
 
         //Badge
         if ($this->badge) {
+
             $badge  = ' ' . mb_strtoupper($this->badge, self::ICONV_CHARSET_INPUT) . ' ';
             $resetX = $this->getX();
             $resetY = $this->getY();
@@ -621,7 +628,11 @@ class InvoicePrinter extends FPDF
             }
         }
     }
-
+    /*
+    public function image(){
+        $this->Image("https://chart.googleapis.com/chart?chs=300x300&cht=qr&chl=http%3A%2F%2Fwww.google.com%2F&choe=UTF-8", $this->margins['l'], $this->margins['t'], $this->dimensions[0],$this->dimensions[1]);
+        //$this->Image("https://chart.googleapis.com/chart?chs=300x300&cht=qr&chl=http%3A%2F%2Fwww.google.com%2F&choe=UTF-8",null,null,0,0,'PNG');
+    }*/
     public function Footer()
     {
         $this->SetY(-$this->margins['t']);
