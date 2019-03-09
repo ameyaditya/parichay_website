@@ -31,6 +31,7 @@ session_unset();
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 	<script type="text/javascript" src="back.js"></script>
 
@@ -77,7 +78,13 @@ session_unset();
 				</div>
 
 			</div>
-		</div>		
+			<div class="carousel-item">
+				<div class="banner">
+					<div class="bg2"></div>
+					
+				</div>
+			</div>
+		</div>
 	</div>
 	<div class="quote-container container">
             <blockquote>
@@ -99,7 +106,7 @@ So, Step-Up Bengaluru!</p>
 		</div>
 	</div>
 	<div class="container">
-		<h2 class="mu-title" id="aboutmarathon">About Step Up 2.0</h2>
+		<h2 class="mu-title" id="aboutmarathon">Step Up 2.0</h2>
 		<p class="lead"><!--Run, because we owe it to them.
 Run, so that those roars, chirps, growls don't fade away to silence .
 Tie those shoe laces tight and break the sweat, run it to save the wildlife.
@@ -154,7 +161,7 @@ Step-up Bengaluru is an annual marathon hosted by RNSIT. Every year, hundreds of
 											</div>
 											<h3 class="mu-price-title">BASIC</h3>
 											<ul>
-												<li>1 marathon Ticket</li>
+												<li>1 Marathon Ticket</li>
 												<li>Breakfast</li>
 												<li>Refreshments</li>
 												<li>Finishers medal</li>
@@ -194,7 +201,21 @@ Step-up Bengaluru is an annual marathon hosted by RNSIT. Every year, hundreds of
 			</div>
 		</section>
 		<!-- End Pricing -->
-
+<div class="container">
+	<h1 class="mu-title" id="eventgallery">Rules & Regulations</h1>
+	<div class="rules-box">
+		<ol>
+			<li>The registration fees are non-refundable and the passes are non-transferable.</li>
+			<li>Any sort of wheeled vehicles such as scooters, motorcycles or bicycles are not permitted on the course.</li>
+			<li>All runners are required to stay on the official course at all times. Leaving the course will result in disqualification.</li>
+			<li>Spectators are requested to stay on the sidewalks and not cut across the course.</li>
+			<li>All runners should conduct themselves in a sporting manner and respect the other runners and organizers.</li>
+			<li>Runners are requested not to litter or leave behind bottles, food wrappers and any other waste on the route.</li>
+			<li>The college or the organizers are not responsible for any personal items belonging to the runners.</li>
+			<li>Headphones are permitted but the runners are advised to be aware of their surroundings for their own safety as well as the safety of others.</li>
+		</ol>
+	</div>
+</div>
 
 
 
@@ -272,7 +293,7 @@ Step-up Bengaluru is an annual marathon hosted by RNSIT. Every year, hundreds of
 <div class="container video">
 	<h1 class="mu-title">Previous Event Video</h1>
 	<div class="embed-responsive embed-responsive-16by9">
-	  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0" allowfullscreen></iframe>
+	  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/6ct4cOujgL0?autoplay=1&loop=1&playlist=6ct4cOujgL0" allowfullscreen></iframe>
 	</div>
 </div>
 

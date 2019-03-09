@@ -288,6 +288,19 @@ blockquote p {
 	align-items: center;
 	background-color: black;
 }
+.banner .bg2{
+	position: absolute;
+	z-index: -1;
+	top:0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	background: url("images/tshirt.jpg") center center;
+	height: 100vh;
+	width: 100%;
+	background-repeat: no-repeat;
+	background-size: contain;
+}
 .banner .bg{
 	position: absolute;
 	z-index: -1;
@@ -295,7 +308,7 @@ blockquote p {
 	bottom: 0;
 	right: 0;
 	left: 0;
-	background: url("images/homepage2.jpeg") center center;
+	background: url("images/elephant.jpg") center center;
 	height: 100vh;
 	width: 100%;
 	background-repeat: no-repeat;
@@ -510,7 +523,7 @@ blockquote p:first-child:before {
 		width: 100px;
 	}
 	.banner .bg{
-		background: url("images/homepage.jpeg") center center;
+		background: url("images/rhino.jpg") center center;
 		background-repeat: no-repeat;
 		background-size: contain;
 	}
@@ -518,8 +531,7 @@ blockquote p:first-child:before {
 		font-size: 1.5em;
 	}
 	.quote-container{
-		margin-left: 20px;
-		margin-right: 20px;
+		font-size: 0.6em;
 	}
 }
 @media screen and (max-width: 767px){
@@ -545,7 +557,10 @@ blockquote p:first-child:before {
 	}
 
 }
-
+.rules-box{
+	font-size: 1.2em;
+	line-height: 200%;
+}
 #mu-pricing {
 	background-color: #fff;
 	display: inline;
